@@ -20,7 +20,7 @@ Navigate to the directory where you want to clone the repository.
 Use the git clone command followed by the repository's URL to clone it to your local machine. 
 
 For example:
-git clone https://github.com/your-username/daily-dsa-practice.git
+git clone https://github.com/Abhishekkumar03012001/Daily-DSA-Practice.git
 Create and Add the New File:
 
 Navigate to the cloned repository's directory on your local machine.
