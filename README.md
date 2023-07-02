@@ -21,26 +21,27 @@ Use the git clone command followed by the repository's URL to clone it to your l
 
 For example:
 git clone https://github.com/Abhishekkumar03012001/Daily-DSA-Practice.git
-Create and Add the New File:
 
+
+Create and Add the New File:
 Navigate to the cloned repository's directory on your local machine.
 Create a new file in the appropriate location within the repository's structure.
 Add your code or content to the new file.
-Stage the Changes:
 
+Stage the Changes:
 In the terminal or command prompt, navigate to the repository's directory if you're not already there.
 Use the git add command followed by the name of the new file to stage the changes. 
 
 For example:
 git add new_file.py
-Commit the Changes:
 
+Commit the Changes:
 Use the git commit command to commit the staged changes. This command requires a commit message to describe the changes. 
 
 For example:
 git commit -m "Add new_file.py to the repository"
-Push the Changes:
 
+Push the Changes:
 Finally, use the git push command to push the committed changes to the remote repository. This command requires authentication by providing your username and password or using SSH keys if set up. 
 
 For example:
