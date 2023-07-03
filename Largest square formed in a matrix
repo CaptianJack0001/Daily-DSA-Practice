@@ -1,0 +1,41 @@
+# PROBLEM: Given a binary matrix mat of size n * m, find out the maximum size square sub-matrix with all 1s.
+class Solution{
+public:
+    int maxSquare(int nl, int mM, vector<vector<int>> mat){
+        int f=0;
+        int m=mat.size();
+        int n=mat[0].size();
+        vector<vector<int>> dp(m,vector<int>(n));
+        for(int i=0;i<m;++i){
+            if(mat[i][0])
+            dp[i][0]=1;
+            f=max(f,dp[i][0]);
+        }
+        for(int j=0;j<n;++j){
+            if(mat[0][j])
+            dp[0][j]=1;
+            f=max(f,dp[0][j]);
+            
+        }
+        for(int i=1;i<m;++i){
+            for(int j=1;j<n;++j){
+                if(mat[i][j]){
+                    dp[i][j]=1;
+                    int a=dp[i-1][j];
+                    int b=dp[i][j-1];
+                    if(a==b){
+                        if(i-a>=0&&j-b>=0&&mat[i-a][j-a])
+                        dp[i][j]=a+1;
+                        else
+                        dp[i][j]=a;
+                    }
+                    else
+                    dp[i][j]=min(a,b)+1;
+                }
+                  f=max(f,dp[i][j]);
+            }
+          
+        }
+        return f;     
+    }
+};
